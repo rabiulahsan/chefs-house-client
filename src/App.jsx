@@ -1,10 +1,13 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
+import NavigationBar from "./components/NavigationBar/NavigationBar";
+import { Outlet } from "react-router-dom";
 
 const App = () => {
   return (
     <div>
-      <h1 className="text-xl font-bold underline">Hello world!</h1>
+      <NavigationBar></NavigationBar>
+      <Outlet></Outlet>
     </div>
   );
 };

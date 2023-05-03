@@ -1,0 +1,14 @@
+.logo {
+  font-weight: bolder;
+  font-size: larger;
+}
+.logo:hover {
+  color: #ffffff;
+}
+.navlink,
+.logo {
+  color: rgb(252, 254, 255);
+}
+.navlink:hover {
+  color: orange;
+}
