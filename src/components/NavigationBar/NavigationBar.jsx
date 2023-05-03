@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const NavigationBar = () => {
   return (
-    <div>
+    <>
       <Navbar bg="dark" variant="dark">
         <Container className="d-flex py-2">
           <Link to="/" className="text-decoration-none logo">
@@ -28,7 +28,7 @@ const NavigationBar = () => {
           </div>
         </Container>
       </Navbar>
-    </div>
+    </>
   );
 };
 

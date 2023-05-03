@@ -1,0 +1,16 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background: url("https://media.istockphoto.com/id/1130714046/photo/empty-dark-wooden-table-in-front-of-abstract-blurred-bokeh-background-of-restaurant-can-be.jpg?s=612x612&w=0&k=20&c=9ywAfpo4Gw3uqPs7-Jxo5ZJj06-B2YOvoKGGktRKx6E=");
+  height: 90vh;
+  width: 100%;
+  z-index: -10;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.banner h3 {
+  font-size: 64px;
+}
