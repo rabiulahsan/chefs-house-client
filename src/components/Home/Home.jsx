@@ -8,6 +8,7 @@ import Banner from "../Banner/Banner";
 import About from "../About/About";
 import Chefs from "../Chefs/Chefs";
 import { Card, Col, Row } from "react-bootstrap";
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   const [chefs, setChefs] = useState([]);
@@ -26,7 +27,7 @@ const Home = () => {
 
       <div className="container-lg">
         <h3 className="fw-bold text-center my-5">Chefs</h3>
-        <Row xs={1} md={2} lg={3} className="g-2">
+        <Row xs={1} md={2} lg={3} className="g-2 gy-4">
           {chefs.map((chef) => (
             <Chefs key={chef.id} chef={chef}></Chefs>
           ))}
@@ -35,6 +36,9 @@ const Home = () => {
 
       {/* about section  */}
       <About></About>
+
+      {/* footer section  */}
+      <Footer></Footer>
     </div>
   );
 };
