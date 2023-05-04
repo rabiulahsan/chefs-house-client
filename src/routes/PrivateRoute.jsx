@@ -11,7 +11,7 @@ const PrivateRoute = ({ children }) => {
   const location = useLocation();
   console.log("user in private route", user);
   if (loading) {
-    return <Spinner animation="border" variant="primary" />;
+    return <Spinner className="mx-5 " animation="border" variant="primary" />;
   }
 
   if (user) {

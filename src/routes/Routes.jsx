@@ -8,11 +8,13 @@ import Login from "../components/Login/Login";
 import ChefsDetails from "../components/ChefsDetails/ChefsDetails";
 import Register from "../components/Register/Register";
 import PrivateRoute from "./PrivateRoute";
+import ErrorElement from "../components/ErrorElement/ErrorElement";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App></App>,
+    errorElement: <ErrorElement></ErrorElement>,
     children: [
       {
         path: "/",
