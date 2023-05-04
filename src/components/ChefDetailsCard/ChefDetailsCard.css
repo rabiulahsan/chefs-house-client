@@ -1,0 +1,10 @@
+.chef-card img {
+  width: 400px;
+  height: 400px;
+}
+.chef-card {
+  width: 50%;
+}
+.likes {
+  font-size: 30px;
+}

@@ -7,7 +7,7 @@ import "./Home.css";
 import Banner from "../Banner/Banner";
 import About from "../About/About";
 import Chefs from "../Chefs/Chefs";
-import { Card, Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import Footer from "../Footer/Footer";
 import Review from "../Review/Review";
 
@@ -15,7 +15,7 @@ const Home = () => {
   const [chefs, setChefs] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/")
+    fetch("https://chefs-house-server-rabiulahsan.vercel.app/")
       .then((res) => res.json())
       .then((data) => setChefs(data));
   }, []);

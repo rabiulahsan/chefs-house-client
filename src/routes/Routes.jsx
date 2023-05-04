@@ -27,7 +27,10 @@ const router = createBrowserRouter([
             <ChefsDetails></ChefsDetails>
           </PrivateRoute>
         ),
-        loader: ({ params }) => fetch(`http://localhost:5000/${params.id}`),
+        loader: ({ params }) =>
+          fetch(
+            `https://chefs-house-server-rabiulahsan.vercel.app/${params.id}`
+          ),
       },
       {
         path: "/blog",
