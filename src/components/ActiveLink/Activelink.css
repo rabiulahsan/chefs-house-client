@@ -1,0 +1,13 @@
+.active-text-style {
+  color: tomato;
+  text-decoration: none !important;
+}
+.text-style {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.active-text-style,
+.text-style:hover {
+  color: tomato;
+}

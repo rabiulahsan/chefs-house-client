@@ -5,10 +5,11 @@
 .logo:hover {
   color: #ffffff;
 }
-.navlink,
+
 .logo {
-  color: rgb(252, 254, 255);
+  color: rgb(252, 254, 255) !important;
 }
-.navlink:hover {
-  color: orange;
+.navlink {
+  display: flex;
+  gap: 20px;
 }

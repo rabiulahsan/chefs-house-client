@@ -5,6 +5,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { FaUserCircle } from "react-icons/fa";
+import Activelink from "../ActiveLink/Activelink";
 
 const NavigationBar = () => {
   const { user, logOut } = useContext(AuthContext);
@@ -21,13 +22,9 @@ const NavigationBar = () => {
           <Link to="/" className="text-decoration-none logo">
             Chefs House
           </Link>
-          <div className="">
-            <Link to="/" className="navlink mx-4 text-decoration-none">
-              Home
-            </Link>
-            <Link to="/blog" className="navlink mx-4 text-decoration-none">
-              Blog
-            </Link>
+          <div className="navlink">
+            <Activelink to="/">Home</Activelink>
+            <Activelink to="/blog">Blog</Activelink>
           </div>
           <div className="">
             <img src="" alt="" />
