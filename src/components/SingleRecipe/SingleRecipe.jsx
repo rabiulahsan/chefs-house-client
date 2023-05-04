@@ -3,13 +3,15 @@
 import "./SingleRecipe.css";
 import React, { useState } from "react";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const SingleRecipe = ({ recipe }) => {
   const { name, ingredients, method, rating, dishpic } = recipe;
   const [react, setReact] = useState(false);
 
   const reactControl = () => {
-    alert("okay");
+    toast("Added as a favourite");
     setReact(true);
   };
   return (
@@ -35,6 +37,7 @@ const SingleRecipe = ({ recipe }) => {
               ) : (
                 <AiOutlineHeart onClick={reactControl}></AiOutlineHeart>
               )}
+              <ToastContainer />
             </span>
           </div>
         </div>
