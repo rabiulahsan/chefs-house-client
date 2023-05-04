@@ -22,7 +22,6 @@ const Home = () => {
   return (
     <div>
       <Banner></Banner>
-      <About></About>
 
       {/* all chefs  */}
 
@@ -34,6 +33,9 @@ const Home = () => {
           ))}
         </Row>
       </div>
+
+      {/* about section  */}
+      <About></About>
     </div>
   );
 };
