@@ -5,6 +5,9 @@ import React, { useState } from "react";
 import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Rating } from "@smastrom/react-rating";
+
+import "@smastrom/react-rating/style.css";
 
 const SingleRecipe = ({ recipe }) => {
   const { name, ingredients, method, rating, dishpic } = recipe;
@@ -28,8 +31,8 @@ const SingleRecipe = ({ recipe }) => {
             <span className="fw-bold">Method: </span>
             {method}
           </p>
-          <div className="rating d-flex justify-content-between">
-            <p>rating</p>
+          <div className="rating d-flex justify-content-between align-items-center">
+            <Rating style={{ maxWidth: 180 }} value={rating} readOnly />
 
             <span className="react">
               {react ? (
