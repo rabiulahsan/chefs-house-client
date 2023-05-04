@@ -3,7 +3,7 @@ import "./ChefsDetails.css";
 import React from "react";
 
 const ChefsDetails = () => {
-  return <div>hlw</div>;
+  return <div></div>;
 };
 
 export default ChefsDetails;
