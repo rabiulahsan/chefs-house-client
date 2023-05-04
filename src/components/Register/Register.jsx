@@ -38,10 +38,14 @@ const Register = () => {
 
   //update display function
   const profileUpdate = (loggedUser, userName, photoUrl) => {
-    return updateProfile(loggedUser, {
+    updateProfile(loggedUser, {
       displayName: userName,
       photoURL: photoUrl,
-    });
+    })
+      .then(() => {})
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   const handleAccepted = (event) => {

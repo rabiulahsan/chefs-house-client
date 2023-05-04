@@ -28,7 +28,11 @@ const NavigationBar = () => {
           <div className="user">
             {user ? (
               <>
-                <img src="" alt="Profile" title={user.displayName} />
+                <img
+                  src={user.photoURL}
+                  alt="Profile"
+                  title={user.displayName}
+                />
                 <Button onClick={handleLogOut} variant="light">
                   Logout
                 </Button>
