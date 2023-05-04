@@ -1,11 +1,17 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import "./SingleRecipe.css";
-import React from "react";
-import { AiOutlineHeart } from "react-icons/ai";
+import React, { useState } from "react";
+import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 
 const SingleRecipe = ({ recipe }) => {
   const { name, ingredients, method, rating, dishpic } = recipe;
+  const [react, setReact] = useState(false);
+
+  const reactControl = () => {
+    alert("okay");
+    setReact(true);
+  };
   return (
     <div className="col">
       <div className="card recipe-card ">
@@ -22,7 +28,14 @@ const SingleRecipe = ({ recipe }) => {
           </p>
           <div className="rating d-flex justify-content-between">
             <p>rating</p>
-            <AiOutlineHeart></AiOutlineHeart>
+
+            <span className="react">
+              {react ? (
+                <AiFillHeart disable={true}></AiFillHeart>
+              ) : (
+                <AiOutlineHeart onClick={reactControl}></AiOutlineHeart>
+              )}
+            </span>
           </div>
         </div>
       </div>
