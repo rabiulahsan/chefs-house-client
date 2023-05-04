@@ -13,3 +13,8 @@
   display: flex;
   gap: 20px;
 }
+
+.user img {
+  width: 80px;
+  margin-right: 20px;
+}

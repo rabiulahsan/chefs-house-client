@@ -2,12 +2,11 @@
 /* eslint-disable no-unused-vars */
 import { Button, Card } from "react-bootstrap";
 import "./Chefs.css";
-import React from "react";
+import React, { createContext } from "react";
 import { Link } from "react-router-dom";
 import { AiOutlineHeart } from "react-icons/ai";
 
 const Chefs = ({ chef }) => {
-  console.log(chef);
   const { id, name, img_url, experience_years, num_recipes } = chef;
   return (
     <div>

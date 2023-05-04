@@ -4,7 +4,6 @@ import "./NavigationBar.css";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
-import { FaUserCircle } from "react-icons/fa";
 import Activelink from "../ActiveLink/Activelink";
 
 const NavigationBar = () => {
@@ -26,19 +25,19 @@ const NavigationBar = () => {
             <Activelink to="/">Home</Activelink>
             <Activelink to="/blog">Blog</Activelink>
           </div>
-          <div className="">
-            <img src="" alt="" />
-            <Nav>
-              {user ? (
+          <div className="user">
+            {user ? (
+              <>
+                <img src="" alt="Profile" title={user.displayName} />
                 <Button onClick={handleLogOut} variant="light">
                   Logout
                 </Button>
-              ) : (
-                <Link to="/login">
-                  <Button variant="light">Login</Button>
-                </Link>
-              )}
-            </Nav>
+              </>
+            ) : (
+              <Link to="/login">
+                <Button variant="light">Login</Button>
+              </Link>
+            )}
           </div>
         </Container>
       </Navbar>

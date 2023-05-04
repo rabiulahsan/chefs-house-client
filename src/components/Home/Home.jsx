@@ -7,7 +7,6 @@ import "./Home.css";
 import Banner from "../Banner/Banner";
 import About from "../About/About";
 import Chefs from "../Chefs/Chefs";
-import { useLoaderData, useParams } from "react-router-dom";
 import { Card, Col, Row } from "react-bootstrap";
 
 const Home = () => {

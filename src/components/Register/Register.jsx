@@ -4,6 +4,7 @@ import "./Register.css";
 import React, { useContext, useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import { getAuth, updateProfile } from "firebase/auth";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -21,18 +22,26 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
 
-    console.log(name, photo, email, password);
     createUser(email, password)
       .then((result) => {
         const createdUser = result.user;
-        console.log(createdUser);
         form.reset();
         navigate("/login");
+        profileUpdate(result.user, name, photo);
+        console.log(createdUser);
       })
       .catch((error) => {
         console.error(error);
         setErrorMessage(error.message);
       });
+  };
+
+  //update display function
+  const profileUpdate = (loggedUser, userName, photoUrl) => {
+    return updateProfile(loggedUser, {
+      displayName: userName,
+      photoURL: photoUrl,
+    });
   };
 
   const handleAccepted = (event) => {
