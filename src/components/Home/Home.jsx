@@ -9,6 +9,7 @@ import About from "../About/About";
 import Chefs from "../Chefs/Chefs";
 import { Card, Col, Row } from "react-bootstrap";
 import Footer from "../Footer/Footer";
+import Review from "../Review/Review";
 
 const Home = () => {
   const [chefs, setChefs] = useState([]);
@@ -36,6 +37,9 @@ const Home = () => {
 
       {/* about section  */}
       <About></About>
+
+      {/* Review Section */}
+      <Review></Review>
 
       {/* footer section  */}
       <Footer></Footer>
