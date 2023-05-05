@@ -1,4 +1,5 @@
 /* eslint-disable no-unused-vars */
+import LazyLoad from "react-lazy-load";
 import "./Blog.css";
 import React from "react";
 
