@@ -3,10 +3,17 @@ import { AiFillGithub, AiFillGoogleCircle } from "react-icons/ai";
 import "./SocialBtn.css";
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const SocialBtn = () => {
+  //for redirecting
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || "/";
+
   //state for user via social
-  const [userSocial, setUserSociasl] = useState({});
+  const [userSocial, setUserSocial] = useState({});
 
   // call the context
 
@@ -17,8 +24,9 @@ const SocialBtn = () => {
     googleLogin()
       .then((result) => {
         const user = result.user;
-        setUserSociasl(user);
+        setUserSocial(user);
         console.log(user);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorMessage = error.message;
@@ -31,8 +39,9 @@ const SocialBtn = () => {
     githubLogin()
       .then((result) => {
         const user = result.user;
-        setUserSociasl(user);
+        setUserSocial(user);
         console.log(user);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorMessage = error.message;

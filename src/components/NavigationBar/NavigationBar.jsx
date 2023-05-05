@@ -14,6 +14,7 @@ const NavigationBar = () => {
       .then()
       .catch((error) => console.log(error));
   };
+
   return (
     <>
       <Navbar bg="dark" variant="dark">
@@ -25,14 +26,15 @@ const NavigationBar = () => {
             <Activelink to="/">Home</Activelink>
             <Activelink to="/blog">Blog</Activelink>
           </div>
-          <div className="user">
+          <div className="user  gx-3 ">
             {user ? (
               <>
                 <img
                   src={user.photoURL}
-                  alt="Profile"
-                  title={user.displayName}
+                  alt="Profile Photo"
+                  title={user.displayName ? user.displayName : "user"}
                 />
+
                 <Button onClick={handleLogOut} variant="light">
                   Logout
                 </Button>
