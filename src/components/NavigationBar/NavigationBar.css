@@ -21,3 +21,22 @@
 .user {
   color: white;
 }
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    flex-direction: column !important;
+  }
+  .navlink {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .user {
+    display: flex;
+    flex-direction: column;
+  }
+  .user img {
+    margin: 10px;
+  }
+}

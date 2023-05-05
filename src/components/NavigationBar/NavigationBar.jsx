@@ -17,9 +17,9 @@ const NavigationBar = () => {
   };
 
   return (
-    <>
+    <div>
       <Navbar bg="dark" variant="dark">
-        <Container className="d-flex py-2">
+        <Container className="d-flex py-2 navigation">
           <Link to="/" className="text-decoration-none logo">
             Chefs House
           </Link>
@@ -48,7 +48,7 @@ const NavigationBar = () => {
           </div>
         </Container>
       </Navbar>
-    </>
+    </div>
   );
 };
 

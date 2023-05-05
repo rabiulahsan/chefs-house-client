@@ -6,7 +6,9 @@ const Banner = () => {
   return (
     <div className="banner text-center">
       <div className="banner-details ">
-        <h3 className=" fw-bolder">Welcome to Chef&apos;s House</h3>
+        <h3 className=" fw-bolder banner-header">
+          Welcome to Chef&apos;s House
+        </h3>
         <p className="fs-5">
           A place where you can find best chief who is perfect for your suitable
           dishes...

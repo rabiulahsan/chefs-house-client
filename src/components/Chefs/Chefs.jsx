@@ -10,16 +10,16 @@ import LazyLoad from "react-lazy-load";
 const Chefs = ({ chef }) => {
   const { id, name, img_url, experience_years, num_recipes, likes } = chef;
   return (
-    <div>
+    <div className="">
       <Card style={{ width: "18rem" }} className=" card">
         {/* lazy loading */}
-        <div>
+        <div className="text-center">
           <LazyLoad height={250}>
-            <Card.Img variant="top" src={img_url} />
+            <img className="my-3" src={img_url} alt="" />
           </LazyLoad>
         </div>
         <Card.Body>
-          <h4 className="fw-bold">{name}</h4>
+          <h4 className="fw-bold mt-3">{name}</h4>
           <p>Experiences {experience_years} years</p>
 
           <div className="d-flex justify-content-between">

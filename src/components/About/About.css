@@ -1,0 +1,10 @@
+@media only screen and (max-width: 768px) {
+  .about {
+    flex-direction: column-reverse;
+  }
+  .about-details {
+    width: 100% !important;
+    margin: 20px !important;
+    padding-left: 20px !important;
+  }
+}

@@ -26,7 +26,7 @@ const Home = () => {
 
       {/* all chefs  */}
 
-      <div className="container-lg">
+      <div className="container-lg ">
         <h3 className="fw-bold text-center my-5">Chefs</h3>
         <Row xs={1} md={2} lg={3} className="g-2 gy-4">
           {chefs.map((chef) => (
