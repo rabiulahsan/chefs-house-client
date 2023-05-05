@@ -6,6 +6,7 @@ import React, { useContext, useState } from "react";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { getAuth, updateProfile } from "firebase/auth";
+import SocialBtn from "../SocialBtn/SocialBtn";
 
 const Register = () => {
   const { createUser } = useContext(AuthContext);
@@ -25,6 +26,10 @@ const Register = () => {
   const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;
+
+    if (emailErrorMessage || passwordError) {
+      return;
+    }
 
     createUser(email, password)
       .then((result) => {
@@ -146,6 +151,11 @@ const Register = () => {
           Already Have an Account? <Link to="/login">Login</Link>
         </Form.Text>
       </Form>
+
+      {/* registration via social button  */}
+      <div className="social-btn">
+        <SocialBtn></SocialBtn>
+      </div>
     </Container>
   );
 };

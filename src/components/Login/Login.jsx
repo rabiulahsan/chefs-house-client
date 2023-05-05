@@ -4,6 +4,7 @@ import "./Login.css";
 import React, { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import SocialBtn from "../SocialBtn/SocialBtn";
 
 const Login = () => {
   const { signIn } = useContext(AuthContext);
@@ -62,6 +63,11 @@ const Login = () => {
         <Form.Text className="text-success"></Form.Text>
         <Form.Text className="text-danger"></Form.Text>
       </Form>
+
+      {/* log in via social button  */}
+      <div className="social-btn">
+        <SocialBtn></SocialBtn>
+      </div>
     </Container>
   );
 };
